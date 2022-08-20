@@ -22,8 +22,6 @@ namespace TestEnv
         private MyResourceSinkComponent r_PowerSink = null;
         private MyResourceDistributorComponent r_PowerDistributor = null;
 
-        private MyStringHash stringHash = new MyStringHash();
-
         public IMyCubeGrid Grid;
 
         /// <summary>
@@ -61,8 +59,8 @@ namespace TestEnv
                 }
 
                 r_PowerSource = new MyResourceSourceComponent();
-                r_PowerSink = new MyResourceSinkComponent().SetRequiredInputFuncByType;                
-
+                r_PowerSink = new MyResourceSinkComponent();
+                
                 // Lets find the appropriate blocks.
                 foreach (MyCubeBlock cube in Grid.GetFatBlocks<IMyCubeBlock>())
                 {
@@ -72,13 +70,11 @@ namespace TestEnv
                             EnableBlockHighlightRepair(cube);
                         else
                             EnableBlockHighlightHealthy(cube);
-                    }
-
-                    if (cube is IMyBatteryBlock)
-                    {
-                        
-                    }
+                    }                    
                 }
+
+                MyVisualScriptLogicProvider.ButtonPressedEntityName;
+
 
 
 
@@ -117,14 +113,12 @@ namespace TestEnv
             MyVisualScriptLogicProvider.SetHighlight(block.Name, false, 0, 0, Color.LightGray, -1);
         }
 
-        /// <summary>
-        /// Set electric input requirement
-        /// </summary>
-        /// <returns></returns>
-        private float RequiredElectricInputFunc()
+        private void ButtonPressed(string name, int button, long playerID, long blockID)
         {
-            return 1.0f; // Mwh
+
         }
+
+
 
     }
 }
