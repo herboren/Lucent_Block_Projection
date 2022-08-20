@@ -50,19 +50,19 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Sandbox.Common">
-      <HintPath>..\..\source\repos\ClassLibrary1\bin\x64\Debug\Sandbox.Common.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\..\..\source\repos\ClassLibrary1\bin\x64\Debug\Sandbox.Common.dll</HintPath>
     </Reference>
     <Reference Include="Sandbox.Game">
-      <HintPath>..\..\source\repos\ClassLibrary1\bin\x64\Debug\Sandbox.Game.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\..\..\source\repos\ClassLibrary1\bin\x64\Debug\Sandbox.Game.dll</HintPath>
     </Reference>
     <Reference Include="Sandbox.Graphics">
-      <HintPath>..\..\source\repos\ClassLibrary1\bin\x64\Debug\Sandbox.Graphics.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\..\..\source\repos\ClassLibrary1\bin\x64\Debug\Sandbox.Graphics.dll</HintPath>
     </Reference>
     <Reference Include="SpaceEngineers.Game">
-      <HintPath>..\..\source\repos\ClassLibrary1\bin\x64\Debug\SpaceEngineers.Game.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\..\..\source\repos\ClassLibrary1\bin\x64\Debug\SpaceEngineers.Game.dll</HintPath>
     </Reference>
     <Reference Include="SpaceEngineers.ObjectBuilders">
-      <HintPath>..\..\source\repos\ClassLibrary1\bin\x64\Debug\SpaceEngineers.ObjectBuilders.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\..\..\source\repos\ClassLibrary1\bin\x64\Debug\SpaceEngineers.ObjectBuilders.dll</HintPath>
     </Reference>
     <Reference Include="SpaceEngineers.ObjectBuilders.XmlSerializers">
       <HintPath>N:\SteamLibrary\steamapps\common\SpaceEngineers\Bin64\SpaceEngineers.ObjectBuilders.XmlSerializers.dll</HintPath>
@@ -76,35 +76,36 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="VRage">
-      <HintPath>..\..\source\repos\ClassLibrary1\bin\x64\Debug\VRage.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\..\..\source\repos\ClassLibrary1\bin\x64\Debug\VRage.dll</HintPath>
     </Reference>
     <Reference Include="VRage.Game">
-      <HintPath>..\..\source\repos\ClassLibrary1\bin\x64\Debug\VRage.Game.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\..\..\source\repos\ClassLibrary1\bin\x64\Debug\VRage.Game.dll</HintPath>
     </Reference>
     <Reference Include="VRage.Input">
-      <HintPath>..\..\source\repos\ClassLibrary1\bin\x64\Debug\VRage.Input.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\..\..\source\repos\ClassLibrary1\bin\x64\Debug\VRage.Input.dll</HintPath>
     </Reference>
     <Reference Include="VRage.Library">
-      <HintPath>..\..\source\repos\ClassLibrary1\bin\x64\Debug\VRage.Library.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\..\..\source\repos\ClassLibrary1\bin\x64\Debug\VRage.Library.dll</HintPath>
     </Reference>
     <Reference Include="VRage.Math">
-      <HintPath>..\..\source\repos\ClassLibrary1\bin\x64\Debug\VRage.Math.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\..\..\source\repos\ClassLibrary1\bin\x64\Debug\VRage.Math.dll</HintPath>
     </Reference>
     <Reference Include="VRage.Math.XmlSerializers">
       <HintPath>N:\SteamLibrary\steamapps\common\SpaceEngineers\Bin64\VRage.Math.XmlSerializers.dll</HintPath>
     </Reference>
     <Reference Include="VRage.Render">
-      <HintPath>..\..\source\repos\ClassLibrary1\bin\x64\Debug\VRage.Render.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\..\..\source\repos\ClassLibrary1\bin\x64\Debug\VRage.Render.dll</HintPath>
     </Reference>
     <Reference Include="VRage.Render11">
-      <HintPath>..\..\source\repos\ClassLibrary1\bin\x64\Debug\VRage.Render11.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\..\..\source\repos\ClassLibrary1\bin\x64\Debug\VRage.Render11.dll</HintPath>
     </Reference>
     <Reference Include="VRage.Scripting">
       <HintPath>N:\SteamLibrary\steamapps\common\SpaceEngineers\Bin64\VRage.Scripting.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SessionTemplate.cs" />
+    <Compile Include="GetPlayerCameraSphereD.cs" />
+    <Compile Include="LucentBlockProjection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
