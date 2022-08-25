@@ -107,6 +107,7 @@
     <Compile Include="GetPlayerCameraSphereD.cs" />
     <Compile Include="LucentBlockProjection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RadioLucent.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
