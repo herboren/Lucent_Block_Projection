@@ -1,18 +1,8 @@
-﻿using Sandbox.Common.ObjectBuilders;
-using Sandbox.Game;
-using Sandbox.Game.Entities;
-using Sandbox.Game.Entities.Character;
-using Sandbox.ModAPI;
+﻿using Sandbox.ModAPI;
 using SpaceEngineers.Game.ModAPI;
-using System.Collections.Generic;
-using VRage.Game;
-using VRage.Game.Components;
-using VRage.Game.Entity;
 using VRage.Game.Entity.UseObject;
 using VRage.Game.ModAPI;
 using VRage.ModAPI;
-using VRage.ObjectBuilders;
-using VRage.Utils;
 using VRageMath;
 
 namespace TestEnv
@@ -26,20 +16,23 @@ namespace TestEnv
     [MyUseObject("lucent")]
     class RadioLucent : MyUseObjectBase
     {
-        MatrixD InteractionMatrix;
-        public readonly IMyButtonPanel ButtonPanel;
+        MatrixD InteractionMatrix;        
         public readonly Matrix LocalMatrix;
+        public readonly IMyButtonPanel ButtonPanel;
+
+        // Used for Instance between classes
         public bool IsPressed { get; set; }
 
-        public override float InteractiveDistance =>
-            0;
+        // Overrides for interaction matrix
+        public override float InteractiveDistance => 0;
+        public override UseActionEnum PrimaryAction => UseActionEnum.Manipulate;
+        public override UseActionEnum SecondaryAction => UseActionEnum.OpenTerminal;
         public override MatrixD ActivationMatrix => InteractionMatrix;
-        public override UseActionEnum PrimaryAction =>
-            UseActionEnum.Manipulate;
-        public override UseActionEnum SecondaryAction =>
-            UseActionEnum.OpenTerminal;
-
+        
+        // Object for session comp.
         public static LucentBlockProjection instance = LucentBlockProjection.Instance;
+
+        // Implement overrides for Button down, button up.
         public override UseActionEnum SupportedActions => UseActionEnum.Manipulate
                                                         | UseActionEnum.UseFinished; // gets called when releasing manipulate
         

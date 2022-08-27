@@ -1,4 +1,4 @@
-﻿ using Sandbox.Game;
+﻿using Sandbox.Game;
 using Sandbox.Game.Entities;
 using Sandbox.ModAPI;
 using System.Collections.Generic;
@@ -6,13 +6,6 @@ using VRage.Game.Components;
 using VRage.Game.Entity;
 using VRageMath;
 using VRage.Game.ModAPI;
-using Sandbox.Game.EntityComponents;
-using VRage.Utils;
-using SpaceEngineers.Game.ModAPI;
-using VRage.Game;
-using System.IO;
-using VRage;
-using VRage.Input;
 
 namespace TestEnv
 {
@@ -39,8 +32,9 @@ namespace TestEnv
         {
             Instance = this;
 
-            Ticks++;
-                        
+            Ticks++; // Count server ticks
+                   
+            // Slow down updates
             if (Ticks % 120 == 0)
             {
                 new GetPlayerCameraSphereD(MyAPIGateway.Session.Camera, 10, out sphere);
@@ -81,16 +75,13 @@ namespace TestEnv
                         {
                             DisableBlockHighlight(cube);
                         }
-                    }
-                    
+                    }                    
                 }
-
 
                 // Whats going on? (Custom, Ingame Breakpoint)
                 // MyAPIGateway.Utilities.ShowMessage("", $"");
             }
         }
-
 
         /// <summary>
         /// Enable highlight if block damaged, set health status color code

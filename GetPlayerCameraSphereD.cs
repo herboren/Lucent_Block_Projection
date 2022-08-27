@@ -8,7 +8,6 @@ namespace TestEnv
         private Vector3D _position { get; set; } = new Vector3D();
         private int _radius { get; set; } = 10; // Default 10 Meters
 
-
         //
         // Summary:
         //     All values must be present for out sphereD
@@ -17,7 +16,6 @@ namespace TestEnv
             this._radius = radius;
             this._position = camera.Position;
             sphere = GetPlayerCameraBoundingSphereD(_position, _radius);
-
         }
 
         //
